@@ -1,7 +1,8 @@
-terraform {
 
 
-
+provider "aws" {
+  region = "ap-south-1" # Set this to the region where you're deploying resources
+}terraform {
   backend "s3" {
     bucket         = "my-terraform-backend-krish"
     key            = "eks-velero/terraform.tfstate"
